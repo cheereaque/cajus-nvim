@@ -4,3 +4,13 @@
 (set nvim.g.conjure#mapping#doc_word "K")
 (set nvim.g.conjure#client#clojure#nrepl#eval#auto_require false)
 (set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#enabled false)
+
+(let [group (vim.api.nvim_create_augroup
+              :clojure
+              {:clear true})]
+  (vim.api.nvim_create_autocmd
+    [:BufWritePost]
+    {:pattern "*.clj"
+     :group group
+     :callback #(do 
+                  (vim.cmd ":ConjureEvalFile"))}))

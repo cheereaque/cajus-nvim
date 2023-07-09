@@ -8,6 +8,9 @@
 (nvim.set_keymap :n :<space> :<nop> {:noremap true})
 (set nvim.g.mapleader " ")
 (set nvim.g.maplocalleader ",")
+(set nvim.o.timeoutlen 100)
+(set vim.wo.relativenumber true)
+(set vim.opt.cursorline true)
 
 ;don't wrap lines
 (nvim.ex.set :nowrap)
