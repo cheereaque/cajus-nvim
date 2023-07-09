@@ -33,8 +33,8 @@
   :Olical/aniseed {:branch :develop}
 
   ;; theme
-  :folke/tokyonight.nvim {:mod :theme}
-  :nvim-tree/nvim-web-devicons {}
+  :sainnhe/everforest {:mod :theme}
+  :kyazdani42/nvim-web-devicons {}
 
   ;; status line
   :nvim-lualine/lualine.nvim {:mod :lualine}
@@ -69,4 +69,33 @@
                                 :hrsh7th/cmp-nvim-lsp
                                 :hrsh7th/cmp-vsnip
                                 :PaterJason/cmp-conjure]
-                     :mod :cmp})
+                     :mod :cmp}
+  
+  ;; dashboard
+  :glepnir/dashboard-nvim {:requires [:nvim-tree/nvim-web-devicons]
+                           :mod :dashboard}
+  
+  ;; parinfer
+  :gpanders/nvim-parinfer {:mod :parinfer}
+  
+  ;; lightspeed
+  :ggandor/lightspeed.nvim {}
+
+  ;; which-key
+  :folke/which-key.nvim {:mod :whichkey}
+  
+  ;; clojure
+  :clojure-vim/clojure.vim {}
+  
+  ;; commentary
+  :tpope/vim-commentary {}
+
+  ;; undotree
+  :mbbill/undotree {:mod :undotree}
+  
+  ;; lazygit
+  :kdheepak/lazygit.nvim {:mod :lazygit}
+  
+  ;; vim-jack-in
+  :clojure-vim/vim-jack-in {:requires [:tpope/vim-dispatch
+                                       :radenling/vim-dispatch-neovim]})
