@@ -3,7 +3,7 @@
              telescope telescope
              themes telescope.themes}})
 
-(telescope.setup {:defaults {:file_ignore_patterns ["node_modules"]
+(telescope.setup {:defaults {:file_ignore_patterns [:node_modules]
                              :vimgrep_arguments ["rg"
                                                  "--color=never"
                                                  "--no-heading"
@@ -13,6 +13,8 @@
                                                  "--smart-case"
                                                  "--iglob"
                                                  "!.git"
+                                                 "--ignore-file"
+                                                 ".gitignore"
                                                  "--hidden"]}
                   :extensions {:ui-select {1 (themes.get_dropdown {})}}
                   :pickers {:find_files {:find_command ["rg"
