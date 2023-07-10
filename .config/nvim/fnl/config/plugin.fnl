@@ -82,6 +82,7 @@
   :ggandor/lightspeed.nvim {}
 
   ;; which-key
+  ; shows popup with possible key bindings of the command you started typing
   :folke/which-key.nvim {:mod :whichkey}
   
   ;; clojure
