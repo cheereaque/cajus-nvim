@@ -6,6 +6,16 @@
 (set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#enabled false)
 (set vim.g.clojure_enable_formatting true)
 
+(nvim.create_user_command
+  :ClojureEnableFormatting
+  #(vim.cmd "silent! AniseedEval(set vim.g.clojure_enable_formatting true)")
+  {:bang true})
+
+(nvim.create_user_command
+  :ClojureDisableFormatting
+  #(vim.cmd "silent! AniseedEval(set vim.g.clojure_enable_formatting false)")
+  {:bang true})
+
 (let [group (vim.api.nvim_create_augroup
               :clojure
               {:clear true})]

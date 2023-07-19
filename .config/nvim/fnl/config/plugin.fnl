@@ -99,4 +99,7 @@
   
   ;; vim-jack-in
   :clojure-vim/vim-jack-in {:requires [:tpope/vim-dispatch
-                                       :radenling/vim-dispatch-neovim]})
+                                       :radenling/vim-dispatch-neovim]}
+  
+  ;; wakatime | tracks work time
+  :wakatime/vim-wakatime {})
