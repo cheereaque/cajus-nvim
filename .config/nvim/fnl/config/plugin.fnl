@@ -33,7 +33,8 @@
   :Olical/aniseed {:branch :develop}
 
   ;; theme
-  :sainnhe/everforest {:mod :theme}
+  ;; :sainnhe/everforest {:mod :theme}
+  :EdenEast/nightfox.nvim {:mod :nightfox}
   :kyazdani42/nvim-web-devicons {}
 
   ;; status line
