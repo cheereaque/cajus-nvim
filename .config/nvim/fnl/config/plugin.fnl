@@ -32,9 +32,11 @@
   ;; nvim config and plugins in Fennel
   :Olical/aniseed {:branch :develop}
 
-  ;; theme
-  ;; :sainnhe/everforest {:mod :theme}
-  :EdenEast/nightfox.nvim {:mod :nightfox}
+  ;; themes
+  :sainnhe/everforest {:mod :theme}
+  :EdenEast/nightfox.nvim {:mod :theme}
+  :rose-pine/neovim {:mod :theme}
+  :navarasu/onedark.nvim {:mod theme}
   :kyazdani42/nvim-web-devicons {}
 
   ;; status line
