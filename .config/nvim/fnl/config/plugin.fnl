@@ -105,4 +105,7 @@
                                        :radenling/vim-dispatch-neovim]}
   
   ;; wakatime | tracks work time
-  :wakatime/vim-wakatime {})
+  :wakatime/vim-wakatime {}
+
+  :codota/tabnine-nvim {:run "./dl_binaries.sh"
+                        :mod :tabnine})
