@@ -107,5 +107,6 @@
   ;; wakatime | tracks work time
   :wakatime/vim-wakatime {}
 
+  ;; tabnine
   :codota/tabnine-nvim {:run "./dl_binaries.sh"
                         :mod :tabnine})

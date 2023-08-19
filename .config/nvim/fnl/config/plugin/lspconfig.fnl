@@ -43,10 +43,10 @@
         warn  (.. prefix "SignWarn")
         info  (.. prefix "SignInfo")
         hint  (.. prefix "SignHint")]
-  (vim.fn.sign_define error {:text "" :texthl error})
-  (vim.fn.sign_define warn  {:text "" :texthl warn})
-  (vim.fn.sign_define info  {:text "" :texthl info})
-  (vim.fn.sign_define hint  {:text "" :texthl hint})))
+   (vim.fn.sign_define error {:text "" :texthl error})
+   (vim.fn.sign_define warn  {:text "" :texthl warn})
+   (vim.fn.sign_define info  {:text "" :texthl info})
+   (vim.fn.sign_define hint  {:text "" :texthl hint})))
 
 (define-signs "Diagnostic")
 
@@ -57,7 +57,7 @@
                   {:severity_sort true
                    :update_in_insert false
                    :underline true
-                   :virtual_text false})
+                   :virtual_text true})
                 "textDocument/hover"
                 (vim.lsp.with
                   vim.lsp.handlers.hover
@@ -97,3 +97,14 @@
                           :handlers handlers
                           :before_init before_init
                           :capabilities capabilities}))
+
+
+(let [group (vim.api.nvim_create_augroup
+              :clojure_lsp
+              {:clear true})]
+  (vim.api.nvim_create_autocmd
+    [:CursorHoldI]
+    {:pattern "*.clj"
+     :group group
+     :callback #(do 
+                  (vim.cmd ":lua vim.lsp.buf.signature_help()"))}))

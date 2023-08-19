@@ -11,6 +11,7 @@
 (set nvim.o.timeoutlen 100)
 (set vim.wo.relativenumber true)
 (set vim.opt.cursorline true)
+(set vim.opt.updatetime 100)
 
 ;don't wrap lines
 (nvim.ex.set :nowrap)
