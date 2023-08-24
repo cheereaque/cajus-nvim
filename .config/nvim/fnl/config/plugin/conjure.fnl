@@ -3,7 +3,10 @@
 
 (set nvim.g.conjure#mapping#doc_word "K")
 (set nvim.g.conjure#client#clojure#nrepl#eval#auto_require false)
+(set nvim.g.conjure#relative_file_root (nvim.fn.getcwd))
 (set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#enabled false)
+(set nvim.g.conjure#client#clojure#nrepl#refresh#before "dev/halt")
+(set nvim.g.conjure#client#clojure#nrepl#refresh#after "dev/go")
 (set vim.g.clojure_enable_formatting true)
 
 (nvim.create_user_command
@@ -32,4 +35,6 @@
     {:pattern "*.clj"
      :group group
      :callback #(do 
-                  (vim.cmd ":ConjureEvalFile"))}))
+                  (vim.cmd ":ConjureEvalFile")
+                  (vim.cmd ":ConjureCljRefreshChanged"))}))
+  

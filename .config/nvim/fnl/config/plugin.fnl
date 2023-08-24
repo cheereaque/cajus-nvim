@@ -109,4 +109,9 @@
 
   ;; tabnine
   :codota/tabnine-nvim {:run "./dl_binaries.sh"
-                        :mod :tabnine})
+                        :mod :tabnine}
+  
+  ;; rest-nvim
+  :rest-nvim/rest.nvim {:requires [:nvim-lua/plenary.nvim]
+                        :mod :restnvim})
+  

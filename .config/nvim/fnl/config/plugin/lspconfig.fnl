@@ -98,13 +98,3 @@
                           :before_init before_init
                           :capabilities capabilities}))
 
-
-(let [group (vim.api.nvim_create_augroup
-              :clojure_lsp
-              {:clear true})]
-  (vim.api.nvim_create_autocmd
-    [:CursorHoldI]
-    {:pattern "*.clj"
-     :group group
-     :callback #(do 
-                  (vim.cmd ":lua vim.lsp.buf.signature_help()"))}))

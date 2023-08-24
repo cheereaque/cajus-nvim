@@ -9,6 +9,7 @@
                                       :dockerfile
                                       :fennel
                                       :html
+                                      :http
                                       :java
                                       :javascript
                                       :json

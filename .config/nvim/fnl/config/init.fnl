@@ -6,6 +6,10 @@
 
 ;generic mapping leaders configuration
 (nvim.set_keymap :n :<space> :<nop> {:noremap true})
+(nvim.set_keymap :n :<C-h> :<C-w>h {:noremap true})
+(nvim.set_keymap :n :<C-j> :<C-w>j {:noremap true})
+(nvim.set_keymap :n :<C-k> :<C-w>k {:noremap true})
+(nvim.set_keymap :n :<C-l> :<C-w>l {:noremap true})
 (set nvim.g.mapleader " ")
 (set nvim.g.maplocalleader ",")
 (set nvim.o.timeoutlen 100)
