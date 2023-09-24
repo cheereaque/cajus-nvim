@@ -1,4 +1,4 @@
-(module config.plugin.conjure
+(module config.plugin.restnvim
   {autoload {nvim aniseed.nvim
              rn rest-nvim}})
 

@@ -13,8 +13,8 @@
 (vim.cmd "colorscheme rose-pine")
 
 ;; onedark
-; (let [style :light]
-;   (onedark.setup {:style style
-;                   :toggle_style_key "<leader>ts"
-;                   :toggle_style_list [:light]})
-;   (vim.cmd "colorscheme onedark"))
+(let [style :light]
+  (onedark.setup {:style style
+                  :toggle_style_key "<leader>ts"
+                  :toggle_style_list [:light]})
+  (vim.cmd "colorscheme onedark"))

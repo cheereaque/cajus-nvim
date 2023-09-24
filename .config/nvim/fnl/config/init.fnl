@@ -18,7 +18,7 @@
 (set vim.opt.updatetime 100)
 
 ;don't wrap lines
-(nvim.ex.set :nowrap)
+(nvim.ex.set :wrap)
 
 ;sets a nvim global options
 (let [options

@@ -48,6 +48,11 @@
                                              :nvim-lua/plenary.nvim]
                                   :mod :telescope}
 
+  ;; file management
+  :nvim-telescope/telescope-file-browser.nvim {:requires [:nvim-telescope/telescope.nvim
+                                                          :nvim-lua/plenary.nvim]
+                                               :mod :telescopefilebrowser}
+
   ;; repl tools
   :Olical/conjure {:branch :master :mod :conjure}
 
@@ -113,5 +118,8 @@
   
   ;; rest-nvim
   :rest-nvim/rest.nvim {:requires [:nvim-lua/plenary.nvim]
-                        :mod :restnvim})
+                        :mod :restnvim}
+  
+  :christoomey/vim-tmux-navigator {})
+ 
   
