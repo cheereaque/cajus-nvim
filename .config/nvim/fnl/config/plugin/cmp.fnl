@@ -15,7 +15,8 @@
    {:name :conjure}
    {:name :buffer}
    {:name :vsnip}
-   {:name :luasnip}])
+   {:name :luasnip}
+   {:name :vim-dadbod-completion}])
 
 ;; Setup cmp with desired settings
 

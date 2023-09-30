@@ -15,4 +15,5 @@
                                       :json
                                       :lua
                                       :markdown
-                                      :yaml]})
+                                      :yaml
+                                      :sql]})

@@ -120,6 +120,10 @@
   :rest-nvim/rest.nvim {:requires [:nvim-lua/plenary.nvim]
                         :mod :restnvim}
   
-  :christoomey/vim-tmux-navigator {})
- 
+  ;; tmux integration
+  :christoomey/vim-tmux-navigator {}
   
+  ;; database
+  :tpope/vim-dadbod {:mod :dadbod}
+  :kristijanhusak/vim-dadbod-ui {:mod :dadbod-ui}
+  :kristijanhusak/vim-dadbod-completion {:mod :dadbod-completion})
