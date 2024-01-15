@@ -1,8 +1,8 @@
 (module config.plugin
-  {autoload {nvim aniseed.nvim
-             a aniseed.core
-             util config.util
-             packer packer}})
+ {autoload {nvim aniseed.nvim
+            a aniseed.core
+            util config.util
+            packer packer}})
 
 (defn- safe-require-plugin-config [name]
   (let [(ok? val-or-err) (pcall require (.. :config.plugin. name))]
@@ -69,7 +69,7 @@
   ;; lsp
   :neovim/nvim-lspconfig {:mod :lspconfig}
 
-  ; snippets
+  ;; snippets
   :L3MON4D3/LuaSnip {:requires [:saadparwaiz1/cmp_luasnip]}
 
   ;; autocomplete
@@ -86,9 +86,6 @@
   ;; parinfer
   :gpanders/nvim-parinfer {:mod :parinfer}
   
-  ;; lightspeed
-  :ggandor/lightspeed.nvim {}
-
   ;; which-key
   ; shows popup with possible key bindings of the command you started typing
   :folke/which-key.nvim {:mod :whichkey}
@@ -113,8 +110,8 @@
   :wakatime/vim-wakatime {}
 
   ;; tabnine
-  :codota/tabnine-nvim {:run "./dl_binaries.sh"
-                        :mod :tabnine}
+  ; :codota/tabnine-nvim {:run "./dl_binaries.sh"
+  ;                       :mod :tabnine}
   
   ;; rest-nvim
   :rest-nvim/rest.nvim {:requires [:nvim-lua/plenary.nvim]
@@ -126,4 +123,14 @@
   ;; database
   :tpope/vim-dadbod {:mod :dadbod}
   :kristijanhusak/vim-dadbod-ui {:mod :dadbod-ui}
-  :kristijanhusak/vim-dadbod-completion {:mod :dadbod-completion})
+  :kristijanhusak/vim-dadbod-completion {:mod :dadbod-completion}
+  
+  ;; dims area around function
+  :folke/twilight.nvim {}
+ 
+  ;; locate place in code with char
+  :ggandor/leap.nvim {:mod :leap}
+ 
+  ;; Completion
+  :neoclide/coc.nvim {:mod :coc
+                      :branch :release})

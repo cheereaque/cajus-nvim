@@ -16,4 +16,5 @@
                                       :lua
                                       :markdown
                                       :yaml
-                                      :sql]})
+                                      :sql
+                                      :kotlin]})
